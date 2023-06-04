@@ -15,8 +15,10 @@ const Contact = () => {
     emailjs.sendForm('service_gqra6lj', 'template_aw874xm', form.current, 'hBmH1aoCeJo6PYyFR')
       .then((result) => {
           console.log(result.text);
+          window.alert("Success!");
       }, (error) => {
           console.log(error.text);
+          window.alert("Error!");
       });
   };
 
@@ -46,7 +48,7 @@ const Contact = () => {
                         spacing={2}
                         >
                             <label>Name</label> &nbsp; &nbsp;
-                            <input type="text" name="user_name" />
+                            <input className="form-control" type="text" name="user_name" placeholder='Enter Name'/>
                         </Stack>
 
                         <Stack
@@ -56,7 +58,7 @@ const Contact = () => {
                         spacing={2}
                         >
                             <label>Email</label> &nbsp; &nbsp;
-                            <input type="email" name="user_email" />
+                            <input className="form-control" type="email" name="user_email" placeholder='Enter Email'/>
                         </Stack>
 
                         <Stack
@@ -66,16 +68,16 @@ const Contact = () => {
                         spacing={2}
                         >
                             <label>Message</label> &nbsp; &nbsp;
-                            <textarea name="message" />
+                            <textarea className="form-control" name='message' placeholder='Enter Message'></textarea>
                         </Stack>
 
                         <div>
-                        <input type="submit" value="Send" />
+                            <button className="btn btn-primary" value="Send">Send</button>
                         </div>
                     </Stack>
                 </form>
             </Stack>
-        
+
     </div>
   );
 };
