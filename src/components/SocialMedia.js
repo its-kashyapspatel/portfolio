@@ -26,7 +26,7 @@ export default class SocialMedia extends Component {
                 </a>
             </div>
             <div>
-                <a href='https://github.com/patelkashyap369'>
+                <a href='https://github.com/its-kashyapspatel'>
                     <GitHubIcon/>
                 </a>
             </div>
